@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pong (Ping-Pong) — Browser</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div class="title">Pong (Ping-Pong)</div>
+        <div class="sub">
+          Mode: <span id="modeText">Choose…</span> · Left: <kbd>W</kbd>/<kbd>S</kbd>
+          · Pause: <kbd>Space</kbd> · Reset: <kbd>R</kbd>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="Pong game">
+        <canvas id="game" width="900" height="600"></canvas>
+        <div id="overlay" class="overlay" role="status" aria-live="polite">
+          <div class="overlay-card">
+            <div class="overlay-title" id="overlayTitle">Choose a mode</div>
+            <div class="overlay-body" id="overlayBody">
+              Single player uses an AI paddle on the right.<br />
+              Two players uses <kbd>↑</kbd>/<kbd>↓</kbd> for the right paddle.
+            </div>
+            <div class="overlay-buttons">
+              <button id="btnSingle" class="btn" type="button">Single Player</button>
+              <button id="btnTwo" class="btn btn-secondary" type="button">Two Players</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Tip: Click the game area if your keys aren’t responding.
+      </footer>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
+
